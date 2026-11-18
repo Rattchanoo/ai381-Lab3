@@ -111,7 +111,7 @@ def main() -> None:
 
             # the model, with its signature (inputs and outputs) and an example row
             signature = infer_signature(X_te, proba)
-            mlflow.sklearn.log_model(
+            info = mlflow.sklearn.log_model(
                model,
                 "model",
                 signature=signature,
